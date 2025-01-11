@@ -1,59 +1,80 @@
-# SustainabilityTrackerFrontend
+# Sustainability Tracker
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.7.
+A simple web application for tracking sustainability actions. Users can add and view environmental actions they take, with each action having a point value.
 
-## Development server
+## Setup
 
-To start a local development server, run:
+### Backend
+1. Go to backend folder:
+```
+cd backend
+npm install
+```
 
-```bash
+2. Install required packages:
+```
+npm install express cors
+```
+
+3. Start the server:
+```
+node server.js
+```
+
+Server runs on http://localhost:3000
+
+### Frontend
+1. Go to frontend folder:
+```
+cd frontend
+npm install
+```
+
+2. Start Angular app:
+```
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Website runs on http://localhost:4200
 
-## Code scaffolding
+## How It Works
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+The program lets you:
+- Add new sustainability actions with dates and points
+- View all recorded actions in a table
+- Store actions permanently using a JSON file
 
-```bash
-ng generate component component-name
-```
+Backend stores data in data.json file. Frontend communicates with backend using HTTP requests.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Files
 
-```bash
-ng generate --help
-```
+Backend:
+- server.js: Main server file with API endpoints
+- data.json: Stores all actions (created automatically)
 
-## Building
+Frontend:
+- sustainability.service.ts: Handles API calls
+- sustainability-tracker.component.ts: Main component logic
+- sustainability-tracker.component.html: Page layout
+- sustainability-tracker.component.css: Styling
 
-To build the project run:
+## Requirements
 
-```bash
-ng build
-```
+- Node.js
+- Angular CLI
+- Modern web browser
+- Internet connection (for dependencies)
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Common Issues
 
-## Running unit tests
+If server won't start:
+- Check if port 3000 is free
+- Make sure all packages are installed
+- Check if data.json has proper permissions
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+If frontend won't connect:
+- Verify backend is running
+- Check if CORS is enabled
+- Make sure ports match in service file
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Contact: ptssherpa5@gmail.com
