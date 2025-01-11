@@ -93,4 +93,11 @@ If frontend won't connect:
 - Check if CORS is enabled
 - Make sure ports match in service file
 
+## TESTING:
+
+The testing was done using Postman to check whether the API endpoints and requests are working as intended.
+
+![Image1](Image0.png)
+![Image1](Image1.png)
+
 Contact: ptssherpa5@gmail.com
